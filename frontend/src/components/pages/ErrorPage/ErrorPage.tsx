@@ -1,1 +1,3 @@
-export const ErrorPage=()=> <p>エラーが発生しました。</p>;
+import { Alert } from "@mui/material";
+
+export const ErrorPage = () => <Alert severity="error">エラーが発生しました。</Alert>;

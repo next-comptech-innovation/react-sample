@@ -1,2 +1,3 @@
-import styles from "./ErrorModal.module.scss";
-export const ErrorModal=({message}:{message:string})=><div className={styles.modal}>{message}</div>;
+import { Alert } from "@mui/material";
+
+export const ErrorModal = ({ message }: { message: string }) => <Alert severity="error">{message}</Alert>;

@@ -1,13 +1,14 @@
 import "./App.css";
+import { Container } from "@mui/material";
 import { AppProvider } from "./containers/AppProvider/AppProvider";
 import { AppRoutes } from "./routes/routes";
 
 export default function App() {
   return (
     <AppProvider>
-      <div className="app">
+      <Container maxWidth="lg" sx={{ py: 2 }}>
         <AppRoutes />
-      </div>
+      </Container>
     </AppProvider>
   );
 }

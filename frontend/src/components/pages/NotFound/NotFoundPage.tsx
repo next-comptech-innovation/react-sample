@@ -1,1 +1,3 @@
-export const NotFoundPage=()=> <p>404 Not Found</p>;
+import { Alert } from "@mui/material";
+
+export const NotFoundPage = () => <Alert severity="warning">404 Not Found</Alert>;

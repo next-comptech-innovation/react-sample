@@ -1,1 +1,5 @@
-export const SorryPage=()=> <p>申し訳ありません。しばらくしてからお試しください。</p>;
+import { Alert } from "@mui/material";
+
+export const SorryPage = () => (
+  <Alert severity="info">申し訳ありません。しばらくしてからお試しください。</Alert>
+);

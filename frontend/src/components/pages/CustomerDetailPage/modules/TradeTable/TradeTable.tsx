@@ -1,3 +1,26 @@
-import styles from "./TradeTable.module.scss";
+import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 import { useTradeTable } from "./useTradeTable";
-export const TradeTable=({customerId}:{customerId:string})=>{const {data=[]}=useTradeTable(customerId);return <table className={styles.table}><thead><tr><th>銘柄</th><th>数量</th></tr></thead><tbody>{data.map(t=><tr key={t.id}><td>{t.symbol}</td><td>{t.amount}</td></tr>)}</tbody></table>;};
+
+export const TradeTable = ({ customerId }: { customerId: string }) => {
+  const { data = [] } = useTradeTable(customerId);
+  return (
+    <TableContainer component={Paper}>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>銘柄</TableCell>
+            <TableCell>数量</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {data.map((t) => (
+            <TableRow key={t.id}>
+              <TableCell>{t.symbol}</TableCell>
+              <TableCell>{t.amount}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+};
